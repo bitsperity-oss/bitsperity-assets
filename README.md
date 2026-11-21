@@ -16,6 +16,7 @@ One folder per app. Sources (SVG) live in `<app>/src/`.
 | `kit/` | banner |
 | `lunation/` | banner |
 | `notus/` | banner |
+| `studio/` | banner |
 | `wave/` | banner |
 | `weaver/` | banner |
 
