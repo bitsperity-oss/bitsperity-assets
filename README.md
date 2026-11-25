@@ -18,7 +18,7 @@ One folder per app. Sources (SVG) live in `<app>/src/`.
 | `notus/` | banner |
 | `studio/` | banner |
 | `wave/` | banner |
-| `weaver/` | banner |
+| `weaver/` | banner, and one avatar per agent of the Weaver forest (`<agent>.jpg`, 512×512), drawn by `weaver/src/weaver_art.py` with Spero's helpers |
 
 Raw URLs: `https://raw.githubusercontent.com/bitsperity-oss/bitsperity-assets/main/<app>/<file>`
 
