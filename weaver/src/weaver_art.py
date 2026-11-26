@@ -57,7 +57,16 @@ def tester(d):  # Walk: a window and the pointer that uses it
     d.polygon([(u(0.02), u(-0.12)), (u(0.02), u(0.74)), (u(0.24), u(0.52)), (u(0.4), u(0.86)), (u(0.54), u(0.79)), (u(0.38), u(0.46)), (u(0.68), u(0.46))], fill=GOLD_HI + (255,))
 
 
-AGENTS = [planner, builder, checker, merger, tester]
+def reader(d):  # Read: an eye that sees the plan and writes nothing
+    upper = [(x / 20 * 0.9, -0.48 * (1 - (x / 20) ** 2)) for x in range(-20, 21)]
+    lower = [(x, -y) for x, y in upper]
+    line(d, upper, 10, GOLD_HI)
+    line(d, lower, 10, GOLD)
+    ring(d, 0, 0, 0.3, 9)
+    dot(d, 0, 0, 30)
+
+
+AGENTS = [planner, builder, checker, merger, tester, reader]
 
 if __name__ == "__main__":
     for i, fn in enumerate(AGENTS):
