@@ -66,7 +66,17 @@ def reader(d):  # Read: an eye that sees the plan and writes nothing
     dot(d, 0, 0, 30)
 
 
-AGENTS = [planner, builder, checker, merger, tester, reader]
+def fixer(d):  # Fix: a strand that broke, stitched together again
+    line(d, [(-0.95, 0), (-0.26, 0)], 15, GOLD)
+    line(d, [(0.26, 0), (0.95, 0)], 15, GOLD)
+    for x in (-0.38, 0, 0.38):
+        line(d, [(x - 0.19, -0.52), (x + 0.19, 0.52)], 12, GOLD_HI)
+        line(d, [(x - 0.19, 0.52), (x + 0.19, -0.52)], 12, GOLD_HI)
+    dot(d, -0.95, 0, 20, GOLD)
+    dot(d, 0.95, 0, 20, GOLD)
+
+
+AGENTS = [planner, builder, checker, merger, tester, reader, fixer]
 
 if __name__ == "__main__":
     for i, fn in enumerate(AGENTS):
